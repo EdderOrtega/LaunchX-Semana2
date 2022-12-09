@@ -1,0 +1,558 @@
+*{
+  margin: 0px;
+  background-color: whitesmoke;
+}
+
+body{
+  overflow-x: hidden;
+
+}
+:root{
+  --fondo: #fff;
+  --letra-principal:#095174;
+  --letra-secundaria:#089BA3;
+  --titulos: 'Open Sans', sans-serif;
+}
+.logo{
+    width: min-content;
+    height: min-content;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+
+}
+a:hover{
+    background: rgb(229, 193, 162) ;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    
+}
+header nav .listamenu{
+    width:100%;;
+    position: fixed;
+    z-index:10;
+    height: auto;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    list-style:none;
+    justify-content: stretch;
+    justify-items: stretch;
+}
+
+nav .listamenu a{
+    margin-right: 100px;
+    color:var(--letra-principal);
+    font-size: 50px;
+    border-radius: 20px;
+    border:solid #095174;
+    font-family: 'Irish Grover', cursive;
+}
+nav .logo{
+    position: grid;
+    justify-self: start;
+    justify-self: start;
+    width: 150px;
+    height: 70px;
+}
+.bienvenida{
+    margin-top: 100px;
+    width: 100%;
+    height: 900px;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    background-image:linear-gradient(180deg, rgba(57,100,180,0.4369457255558473) 0%, rgba(59,102,181,0.7478700953037465) 6%, rgba(71,111,185,0) 44%, rgba(255,255,255,0) 100%)
+    ,url(imagenes/pastel-inicio.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 1;
+    filter: grayscale();
+    filter: contrast(200%);
+}
+
+
+.texto-bienvenida{
+    align-items: center;
+    align-content: center;
+    font-family: 'Irish Grover', cursive;
+    margin: 5px;
+    font-size: 100px;
+    color:var(--letra-principal);
+        /* color: rgb(255,te 255, 255); */
+    text-decoration: underline #ffffff;    opacity: 1;
+    background: none;
+}
+
+.message {
+    height: 130px;
+    background-color: rgb(207, 213, 221);
+    font-weight: 900;
+    overflow: hidden;
+    position: relative;
+    top: 0.2rem;
+    right: 5px;
+    animation: openclose 5s;
+    opacity: 0.5;
+}
+
+  @keyframes openclose {
+    0% {
+        right: 0.5rem;
+        width: 0;
+      }
+      5% {
+        width: 50;
+      }
+      15% {
+        width: 100px;
+      }
+      30% {
+        right: 1rem;
+        width: 150px;
+      }
+      33% {
+        right: 2rem;
+        width: 200;
+      }
+      35% {
+        right: 3rem;
+        width: 250;
+      }
+      38% {
+        right: 0rem;
+        
+      }
+      48% {
+        right: 4rem;
+        width: 300px;
+      }
+      62% {
+        right: 0rem;
+        width: 400px;
+      }
+      66% {
+        right: 6rem;
+        width: 450;
+      }
+      71% {
+        right: 7rem;
+        width: 500;
+      }
+      86% {
+        right: 8rem;
+        width: 550px;
+      }
+      95% {
+        right: 0rem;
+        width: 600px;
+      }
+      98% {
+        right: 9rem;
+        width: 700;
+      }
+      100% {
+        right: 0;
+        width: 0;
+        text-indent: 0;
+      }
+  }
+.textoPastelTradicional{
+  margin: 50px 0px 50px 0px;
+  font-size: 6vh;
+  text-align: center;
+  color: rgba(61, 65, 138, 0.756);
+  height: 100px;
+  align-content: center;
+  font-family: 'Irish Grover', cursive;
+}
+
+.slide-container{
+  width:100%;
+  margin-top: 100px;
+  height: 800px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.image-slider{
+  margin-top: 20px;
+  display: flex;
+  width: 700px;
+  height:600px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+
+}
+
+.slides-div {
+  border: #095174 solid 1rem;
+  display: grid;
+  width:600px;
+  height:600px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 30px;
+  box-shadow: 10px 10px 5px 0px rgba(0,143,118,0.44);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,143,118,0.44);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,143,118,0.44);
+}
+
+.img{
+  justify-content: center;
+  position: grid;
+  width: 400px;
+  height: 300px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.button:hover{
+opacity: 0.5;
+background-color: #089BA3;
+}
+.button {
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+#slider-span1:target ~ .image-slider #img1,
+#slider-span1:target ~.image-slider #button-1{
+  width:400px;
+  border-radius: 20px;
+  height: 400px;
+  background-color: transparent;
+}
+#slider-span2:target ~ .image-slider #img2,
+#slider-span2:target ~.image-slider #button-2{
+  width:400px;
+  border-radius: 20px;
+  height: 400px;
+  background-color: transparent;
+}  
+#slider-span3:target ~ .image-slider #img3,
+#slider-span3:target ~.image-slider #button-3{
+  width:400px;
+  border-radius: 20px;
+  height: 400px;
+  background-color: transparent;
+}
+#slider-span4:target ~ .image-slider #img4,
+#slider-span4:target ~.image-slider #button-4{
+  width:400px;
+  border-radius: 20px;
+  height: 400px;
+  background-color: transparent;
+}
+#slider-span5:target ~ .image-slider #img5,
+#slider-span5:target ~.image-slider #button-5{
+  width:400px;
+  border-radius: 20px;
+  height: 400px;
+  background-color: transparent;
+}
+
+#slider-span6:target ~ .image-slider #img6,
+#slider-span6:target ~.image-slider #button-6 .texto-sabor .texto-ingredientes .precio-pastel{
+  width:400px;
+  border-radius: 20px;
+  height: 400px;
+  background-color: transparent;
+}
+
+
+#slider-span1:target ~.image-slider{
+  left:70%;
+  top: 20%;
+  position: relative;
+}
+#slider-span2:target ~.image-slider{
+  left:60%;
+  top: 20%;
+  position: relative;
+}
+#slider-span3:target ~.image-slider{
+  left:40%;
+  top: 20%;
+  position: relative;
+}
+#slider-span4:target ~.image-slider{
+  left:20%;
+  top: 20%;
+  position: relative;
+}
+#slider-span5:target ~.image-slider{
+  left:0%;
+  top: 20%;
+  position: relative;
+}
+#slider-span6:target ~.image-slider{
+  left:-10%;
+  top: 20%;
+  position: relative;
+}
+
+
+
+.nombrepastel{
+  font-weight: bolder;
+  text-align: center;
+  font-size: 3vh;
+  font-family: 'Irish Grover', cursive;
+  color:var(--letra-principal);
+}
+.precio-pastel{
+  text-align: center;
+  font-size: 3vh;
+  font-family: 'Irish Grover', cursive;
+  color:var(--letra-principal);
+}
+.texto-ingredientes{
+  width: 90%;
+  text-align: center;
+  font-size: 2vh;
+  font-family: 'Irish Grover', cursive;
+  color:var(--letra-secundaria);
+  font: bold;
+}
+.personalizar{
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2,4fr);
+  grid-template-rows: repeat(2,4fr);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-content: center;
+  background-color: #089BA3;
+}
+.personalizatitulo{
+  display: grid;
+  grid-column: 1 / span 2;
+  margin-top: -100px;
+  font-size: 50px;
+  border-radius: 50px;
+  font-family: 'Irish Grover', cursive;
+  text-align: center;
+  color: var(--letra-principal);
+  justify-content: center;
+}
+.pasteltamaño{
+  width: 90%;
+  height: 100%;
+  height: -webkit-fill-available;
+  margin: 35px;
+  display: grid;
+  color:var(--letra-principal);
+  font-family: 'Irish Grover', cursive;
+  text-align: center;
+  justify-content: center;
+  align-content: center ;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.pago{
+margin: 25px;
+width: 97%;
+display:grid;
+text-align: center;
+border-radius: 50px;
+justify-items: center;
+background-color: #089BA3;
+
+}
+.pago input{
+  font-size: 30px;
+  border-radius: 20px;
+}
+.pago h1{
+  color: whitesmoke;
+  background-color: #089BA3;
+  font-family: 'Irish Grover', cursive;
+  font-size: 40px;
+}
+.pay{
+  display: grid;
+  justify-self: center;
+  justify-self: center;
+  width: 250px;
+  height: 50px;
+  font-size: x-large;
+  border-radius: 30px;
+  margin:50px;
+}
+.pago form{
+  background-color: #089BA3;
+
+}
+.pay input{
+  width: 100%;
+  border-radius: 50px;
+  border: solid;
+  border: 3px;
+  margin-bottom: 20px;
+}
+
+.saborpastel{
+  width: 90%;
+  height: -webkit-fill-available;
+  margin: 30px;
+  display: grid;
+  font-family: 'Irish Grover', cursive;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.adornos{ 
+  height: -webkit-fill-available;
+  margin: 25px;
+  display: grid;
+  font-family: 'Irish Grover', cursive;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 90%;  
+}
+
+.datos{
+  margin: 15px;
+  width: 95%;
+  display: grid;
+  font-family: 'Irish Grover', cursive;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.direccion{
+  margin-top: 100px;
+  font-size: 30px;
+  background-color: #089BA3;
+  font-family: 'Irish Grover', cursive;
+  display: flex;
+  text-align: center;
+  margin-right: 100px;
+}
+.telefono{
+  font-size: 30px;
+  margin-top: 100px;
+  background-color: #089BA3;
+  font-family: 'Irish Grover', cursive;
+  display: flex;
+  text-align: center;
+  margin-right: 100px;
+}
+.datos input{
+  width:500px;
+  border-radius: 100px;
+}
+.datos input{
+  width:500px;
+  border-radius: 10px;
+  border: solid;
+  border: 3px;
+  border-color: #095174;
+  margin-bottom: 20px;
+}
+.pago input{
+  width: 200px;
+  border-radius: 10px;
+  border: solid;
+  border: 3px;
+  border-color: #095174;
+  margin-bottom: 20px;
+}
+.btnpagar{
+  width: 500px;
+  height: 80px;
+  border-radius: 30px;
+  font-size: 50px;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  background-color: #095174;
+  margin-bottom: 20px;
+}
+.map{
+  width: 90%;
+  height: 300px;
+  background-color: #089BA3;
+}
+.piepagina{
+  margin-top: 200px;
+  height: 490px;
+  font-family: 'Irish Grover', cursive;
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1,1fr);
+  justify-items: start;
+  background-color: #089BA3;
+  color: whitesmoke;
+  font-size: larger;
+}
+.derechos{
+    background-color: #089BA3;
+    font-family: 'Irish Grover', cursive;
+    display: flex;
+    text-align: center;
+    margin-right: 100px;
+    font-size: 22px;
+}
+
+.fin{
+  background-color: #089BA3;
+  font-family: 'Irish Grover', cursive;
+  display:grid;
+  justify-items: start;
+  font-size: large;
+  color: whitesmoke;
+}
+.containerinv{
+  margin-top: 200px;
+  color: var(--letra-principal);
+
+}
+.volverpasteleria{
+  display: grid;
+  justify-self: center;
+  justify-self: center;
+  font-family: 'Irish Grover', cursive;
+  font-size: large;
+  color: var(--titulos);
+  margin:50px;
+}
+table{
+  font-family: Arial, Helvetica, sans-serif;
+  width:98%;
+  border:1px solid;
+  height: max-content;
+  font-size: small;
+  display:flex;
+  justify-content: center;
+  justify-items: center;
+  margin:20px;
+  margin-bottom: 0px;
+  background-color: rgb(148, 179, 189);
+  font:bold;
+}
+td ,tr{
+  border:1px solid;
+  color: black;
+}
+tr:first-of-type{
+  background-color: rgba(5, 245, 253, 0.897);
+  font: bolder;
+}

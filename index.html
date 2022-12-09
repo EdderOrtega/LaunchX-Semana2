@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos.css">
+    <title>LaunchCake</title>
+</head>
+    <body>
+        <header>
+            <nav class="menu">
+                <ul class="listamenu">
+                    <li> 
+                        <div>
+                            <img class="logo" src="./imagenes/logo.png"> 
+                        </div>
+                    </li> 
+                <li> <a href="index.html"> Inicio</a>
+                </li>
+                <li> <a href="inventario.html"> Inventario </a>
+                </li>
+                <li> <a href="#pedir"> Pedido </a>
+                </li>
+                <li> <a href="#contacto"> Contacto</a>
+                </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="bienvenida">
+            <div class="message">
+                <p class="texto-bienvenida">Bienvenidos</p>    
+            </div>
+        </div>
+        <div class="slide-container">
+            <p class="textoPastelTradicional">Pasteles Tradicionales</p>
+            <span class="slider-span" id="slider-span1"></span>
+            <span class="slider-span" id="slider-span2"></span>
+            <span class="slider-span" id="slider-span3"></span>
+            <span class="slider-span" id="slider-span4"></span>
+            <span class="slider-span" id="slider-span5"></span>
+            <span class="slider-span" id="slider-span6"></span>
+            <div class="image-slider">
+                    <div class="slides-div" id="slide-1">
+                        <p class="nombrepastel">Pastel de Chocolate</p>
+                        <img src="./imagenes/pastel-inicio.jpg" alt="" class="img" id="img1">
+                        <a href="#slider-span1" class="button" id="button-1"></a>
+                        <p class="texto-ingredientes">Pan Sabor Chocolate cubiero con betun de Vainilla y trozos de nuez</p>
+                        <h3 class="precio-pastel">$400</h3>
+                    </div>
+                    <div class="slides-div" id="slide-2">
+                        <p class="nombrepastel">Pastel de Fresa</p>
+                        <img src="./imagenes/pastelfresa.jpg" alt="" class="img" id="img2">
+                        <a href="#slider-span2" class="button" id="button-2"></a>
+                        <p class="texto-ingredientes">Pan Sabor Fresa cubiero con betun de chocolate y una rosa comestible</p>
+                        <h3 class="precio-pastel">$250</h3>
+                    </div>
+                    <div class="slides-div" id="slide-3">
+                        <p class="nombrepastel">Pastel de Vainilla</p>
+                        <img src="./imagenes/pastel-vainilla.jpg" alt="" class="img" id="img3">
+                        <a href="#slider-span3" class="button" id="button-3"></a>
+                        <p class="texto-ingredientes">Pan Sabor vainilla cubiero con betun de vainilla</p>
+                        <h3 class="precio-pastel">$300</h3>
+                    </div>
+                    <div class="slides-div" id="slide-4">
+                        <p class="nombrepastel">Pastel de Frutos rojos</p>
+                        <img src="./imagenes/pastelfrutasrojas.jpg" alt="" class="img" id="img4">
+                        <a href="#slider-span4" class="button" id="button-4"></a>
+                        <p class="texto-ingredientes">Pan Sabor vainilla cubiero con frutos rojos naturales</p>
+                        <h3 class="precio-pastel">$500</h3>
+                    </div>
+                    <div class="slides-div" id="slide-5">
+                        <p class="nombrepastel">Pastel de moras</p>
+                        <img src="./imagenes/pastelmoras.jpg" alt="" class="img" id="img5">
+                        <a href="#slider-span5" class="button" id="button-5"></a>
+                        <p class="texto-ingredientes">Pan Sabor vainilla cubiero con betun de Moras y moras naturales</p>
+                        <h3 class="precio-pastel">$350</h3>
+                    </div>
+                    <div class="slides-div" id="slide-6">
+                        <p class="nombrepastel">Pastel de Piña</p>
+                        <img src="./imagenes/pastelpiña.jpg" alt="" class="img" id="img6">
+                        <a href="#slider-span6" class="button" id="button-6"></a>
+                        <p class="texto-ingredientes">Pan Sabor vainilla cubiero con betun de Piña y trozos de piña natural</p>
+                        <h3 class="precio-pastel">$400</h3>
+                    </div>
+            </div>
+        </div>
+        <section  class="personalizar" id="pedir">
+            <div class="personalizatitulo">
+                <h1 >Peronaliza tu Pastel</h1>
+            </div>
+            <div class="pasteltamaño">            
+                <h2> Tamaño </h2><br>
+                <h2><input type="radio" name="tampas"> mini pastel  $ 40.00</h2>><br>
+                <h2><input type="radio" name="tampas"> mediano $ 150.00</h2><br>
+                <h2><input type="radio" name="tampas"> Grande $ 350.00</h2><br>
+                <h2><input type="radio" name="tampas"> Fiesta xv años o boda $ 950.00</h2><br>
+            </div>
+            <div class="saborpastel">
+                <h1> Sabor del pastel(puedes combinarlos a tu gusto) </h1><br>
+                <h2> <input type="checkbox" name="sab1"> limon </h2> <br> 
+                <h2> <input type="checkbox" name="sab2"> 3 leches </h2><br>
+                <h2> <input type="checkbox" name="sab3" >  Chocolate</h2><br>
+                <h2> <input type="checkbox" name="sab4" > Vainilla </h2><br>
+                <h2> <input type="checkbox" name="sab5">  Fresa </h2><br>
+                <h2> <input type="checkbox" name="sab7"> Chesscake </h2><br>
+            </div>
+            <div class="adornos">
+                <h1> Adornos(puedes seleccionar los que quieras) </h1><br> 
+                <h2> <input type="checkbox" name="rosa"> rosas comestibles +20</h2><br>
+                <h2> <input type="checkbox" name="firugra"> figuras de Chocolate +10</h2><br>
+                <h2> <input type="checkbox" name="mariposa"> mariposas +5</h2><br>
+            </div> 
+            <form class="datos">    
+                <h1> Datos Del Cliente </h1> <br>
+                <input type="text" placeholder="Nombre Completo"  name="nomcli" required> <br>
+                <input type="text" placeholder="Dirección" required name="direccion"><br>
+                <input type="number" placeholder="Telefono"  required name="telefono" maxlength="10"><br>
+                <input type="email" placeholder="Email" required name="correo">
+                <h1> Describe tu pastel </h1> <br> <textarea rows=10 cols=65  class="descri" type="text" placeholder="Descripción" name="Descripcion"></textarea>
+            </form>
+        </section> 
+        <div class="pago">
+            <h1>Una vez realizada su eleccion de pastel continue con su pago
+            </h1>
+            <h1>Total a pagar <input class="texto" type="text"></h1>
+            <button class="btnpagar" type="submit" name="pagar" value="Pagar">Pagar</button>
+        </div> 
+        <footer id="contacto" class="piepagina">
+            <h3 class="direccion">Dirección <br> Av Lázaro Cárdenas 2400, Valle Oriente, 66260 San Pedro Garza García, N.L.</h3>
+            <h3 class="telefono ">Telefono<br> 00123456899000 <br> Horario <br> Lunes a Sabado de 9am a 10pm <br> Domingo de 10am a 5pm  </h3>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8579.42050312627!2d-100.333428!3d25.650968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xebe88aad7c075673!2sMetropolitan%20Center!5e1!3m2!1ses-419!2smx!4v1670280504981!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+            <div class="fin">
+                <h3 class="derechos">Derechos Resercados SA de CV 2022</h3>
+            </div>
+        </footer>                
+    </body>
+</html>
